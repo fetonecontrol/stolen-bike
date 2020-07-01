@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     function getElements(response) {
         $('.date-stolen').html(`This bike was stolen on ${response.bikes[0].date_stolen}`);
-        
+        $('.bike-description').html(`<img src="${response.bikes[1].thumb}">`);
     }
 
   });
