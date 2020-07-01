@@ -3,23 +3,24 @@ import './styles.css';
 
 $(document).ready(function() {
   
-  $('#weatherLocation').click(function() {
-    const city = $('#location').val();
-    $('#location').val("");
+  $('#zip-code').click(function() {
+    const city = $('#zip-code').val();
+    $('#zip-code').val("");
 
     (async () => {
-      let weatherService = new WeatherService();
-      const response = await weatherService.getWeatherByCity(city);
+      let stolenBikeList = new BikeInfo();
+      const response = await stolenBikeList.getStolenBikeInfo(city);
+      console.log(response);
       getElements(response);
     })();
 
     function getElements(response) {
       if (response) {
-        $('.showHumidity').text(`The humidity in ${city} is ${response.main.humidity}%`);
-        $('.showTemp').text(`The temperature in Kelvins is ${response.main.temp} degrees.`);
+        $('#date-stolen').text(`This bike was stolen on ${city}`);
+        $('#bike-description').text(`${response}`);
       } else {
-        $('.showHumidity').text(`There was an error handling your request.`);
-        $('.showTemp').text(`Please check your inputs and try again!`);
+        $('#date-stolen').text(`There was an error handling your request.`);
+        $('#bike-description').text(`Please check your inputs and try again!`);
       }
     }
 
