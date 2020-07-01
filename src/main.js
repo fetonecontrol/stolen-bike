@@ -2,10 +2,10 @@ import { BikeInfo } from './../src/bike-call.js';
 import './styles.css';
 
 $(document).ready(function() {
-  
-  $('#zip-code').click(function() {
+  $('#bike-form').submit(function() {
+    event.preventDefault();
     const city = $('#zip-code').val();
-    $('#zip-code').val("");
+    // $('#zip-code').val("");
 
     (async () => {
       let stolenBikeList = new BikeInfo();
@@ -15,13 +15,8 @@ $(document).ready(function() {
     })();
 
     function getElements(response) {
-      if (response) {
-        $('#date-stolen').text(`This bike was stolen on ${city}`);
-        $('#bike-description').text(`${response}`);
-      } else {
-        $('#date-stolen').text(`There was an error handling your request.`);
-        $('#bike-description').text(`Please check your inputs and try again!`);
-      }
+        $('.date-stolen').html(`This bike was stolen on ${response.bikes[0].date_stolen}`);
+        
     }
 
   });
