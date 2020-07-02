@@ -3,6 +3,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
+// import './IMG/noimg.jpg';
 
 $(document).ready(function() {
   $('#bike-form').submit(function() {
@@ -21,13 +22,13 @@ $(document).ready(function() {
       for(let i=0; i<response.bikes.length; i++){
         // $('.date-stolen').html(`This bike was stolen on ${response.bikes[i].date_stolen}`);
         if(response.bikes[i].thumb === null) {
-          // ('.bike-image').append(`<img src="../IMG/noimg.png">`);
-          console.log('no image!')
+          $('.results-container').append(`no image`);
+          // $('.bike-image').append(`<p> No Image! </p>`);
+          // console.log('no image!')
         } else {
-          $('.bike-image').append(`<img src="${response.bikes[i].thumb}">`);
+          $('.results-container').append(`<img src="${response.bikes[i].thumb}">`);
         }
       }
     }
-
   });
 });

@@ -1,19 +1,35 @@
-#container-div {
+.overall-container {
   overflow: scroll;
-  height: 100vh;
   width: 100vw;
-  justify-content: center;
-  display: flex;
+  grid-template-rows: 1fr 8fr;
+  grid-template-columns: 1fr;
+  /* justify-content: center; */
   /* flex-direction: column; */
   /* justify-content: center; */
-  align-items: center;
-}
-.bike-image img{
-    border-radius: 20px;
-    padding: 20px;
+  /* align-items: center; */
 }
 
 .nav-bar {
+grid-row: 1;
+}
+
+.results-container {
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 5em;
+}
+
+.results-container img {
+  justify-self: center;
+}
+
+.results-container img{
+  border-radius: 10%;
+  padding: 20px;
+}
+
+/* .nav-bar {
   justify-content: center;
   align-items: center;
-}
+} */
