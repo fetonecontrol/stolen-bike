@@ -17,19 +17,16 @@ grid-row: 1;
   grid-row: 2;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 5em;
+  /* grid-template-rows: 5em; */
+  border: 1px solid red;
 }
 
 .results-container img {
   justify-self: center;
-}
-
-.results-container img{
+  height: 250px;
+  width: 250px;
   border-radius: 10%;
   padding: 20px;
 }
 
-/* .nav-bar {
-  justify-content: center;
-  align-items: center;
-} */
+
