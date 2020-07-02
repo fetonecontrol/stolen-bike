@@ -11,22 +11,57 @@
 
 .nav-bar {
 grid-row: 1;
+justify-self: center;
 }
 
-.results-container {
+.results-images {
   grid-row: 2;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  width: 50%;
   /* grid-template-rows: 5em; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
-.results-container img {
+.results-images img {
   justify-self: center;
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   border-radius: 10%;
   padding: 20px;
 }
 
+.results-images p {
+  justify-self: center;
+  align-self: center;
+  border-radius: 10%;
+  text-align: center;
+}
+.results-text p {
+  justify-self: center;
+  align-self: center;
+  border-radius: 10%;
+  text-align: center;
+}
+
+.bike-text {
+  grid-column: 3;
+}
+
+/* .results-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+} */
 

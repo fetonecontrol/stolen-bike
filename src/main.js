@@ -19,14 +19,17 @@ $(document).ready(function() {
     })();
 
     function getElements(response) {
+      bikeArray=[];
       for(let i=0; i<response.bikes.length; i++){
         // $('.date-stolen').html(`This bike was stolen on ${response.bikes[i].date_stolen}`);
         if(response.bikes[i].thumb === null) {
-          $('.results-container').append(`<img src="https://i.imgur.com/vy0cfWM.jpg">`);
+          $('.results-images').append(`<img src="https://i.imgur.com/vy0cfWM.jpg">`);
           // $('.bike-image').append(`<p> No Image! </p>`);
           // console.log('no image!')
         } else {
-          $('.results-container').append(`<img src="${response.bikes[i].thumb}">`);
+          thumbNail
+          bikeArray.push(`<img src="${response.bikes[i].thumb}">`);
+          $('.results-text').append(`<p>${response.bikes[i].date_stolen}</p>`);
         }
       }
     }

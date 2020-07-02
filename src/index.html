@@ -4,21 +4,26 @@
     <title>Weather</title>
   </head>
   <body>
-    <div class="overall-container">
-      <div class="nav-bar">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="overall-container">
           <div class="nav-bar">
-          <form id="bike-form">
-            <h1>Get a list of stolen bikes in your area!</h1>
-            <label for="zip-code">Enter a zip code:</label>
-            <input id="zip-code" type="text">
-            <button class="btn btn-success" id="weatherLocation" type="submit">Get bike list!</button>
-          </form>
+              <div class="nav-bar">
+              <form id="bike-form">
+                <h1>Get a list of stolen bikes in your area!</h1>
+                <label for="zip-code">Enter a zip code:</label>
+                <input id="zip-code" type="text">
+                <button class="btn btn-success" id="weatherLocation" type="submit">Get bike list!</button>
+              </form>
+              </div>
           </div>
-      </div>
-    
-      <div class="results-container">
+        <div class="results-images"></div>
       </div>
     </div>
-  </body>
+    <div class="col-md-6">
+      <div class="results-text"></div>
+    </div>
+  </div>
+</body>
 </html>
 
