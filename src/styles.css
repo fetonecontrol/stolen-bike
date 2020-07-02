@@ -17,7 +17,7 @@ justify-self: center;
 .results-images {
   grid-row: 2;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   width: 50%;
   /* grid-template-rows: 5em; */
   /* border: 1px solid red; */
@@ -25,8 +25,8 @@ justify-self: center;
 
 .results-images img {
   justify-self: center;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   border-radius: 10%;
   padding: 20px;
 }
@@ -47,21 +47,3 @@ justify-self: center;
 .bike-text {
   grid-column: 3;
 }
-
-/* .results-text {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-}
-
-.container:hover .overlay {
-  opacity: 1;
-} */
-
