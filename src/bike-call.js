@@ -6,7 +6,8 @@ export class BikeInfo {
       if (response.ok && response.status == 200) {
         jsonifiedResponse = await response.json();
       } else {
-        jsonifiedResponse = false;
+        console.log(response.statusText);
+        // jsonifiedResponse = false;
       }
       return jsonifiedResponse;
     } catch(error) {

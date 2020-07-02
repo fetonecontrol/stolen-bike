@@ -18,23 +18,15 @@ $(document).ready(function() {
     })();
 
     function getElements(response) {
-        $('.date-stolen').html(`This bike was stolen on ${response.bikes[0].date_stolen}`);
-        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
-        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
-        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
-        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
-        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
-        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
-        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
-        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
-        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
-        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
-        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
-        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
-        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
-        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
-        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
-
+      for(let i=0; i<response.bikes.length; i++){
+        // $('.date-stolen').html(`This bike was stolen on ${response.bikes[i].date_stolen}`);
+        if(response.bikes[i].thumb === null) {
+          // ('.bike-image').append(`<img src="../IMG/noimg.png">`);
+          console.log('no image!')
+        } else {
+          $('.bike-image').append(`<img src="${response.bikes[i].thumb}">`);
+        }
+      }
     }
 
   });
