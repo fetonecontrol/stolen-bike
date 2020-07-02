@@ -1,4 +1,7 @@
 import { BikeInfo } from './../src/bike-call.js';
+import $ from 'jquery';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 $(document).ready(function() {
@@ -16,7 +19,22 @@ $(document).ready(function() {
 
     function getElements(response) {
         $('.date-stolen').html(`This bike was stolen on ${response.bikes[0].date_stolen}`);
-        $('.bike-description').html(`<img src="${response.bikes[1].thumb}">`);
+        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
+        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
+        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
+        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
+        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
+        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
+        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
+        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
+        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
+        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
+        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
+        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
+        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
+        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
+        $('.bike-image').append(`<img src="${response.bikes[1].thumb}">`);
+
     }
 
   });
